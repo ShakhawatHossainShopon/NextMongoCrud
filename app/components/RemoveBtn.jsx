@@ -1,5 +1,13 @@
-import React from "react";
+"use client";
 
-export const RemoveBtn = () => {
-  return <div>RemoveBtn</div>;
-};
+import { HiOutlineTrash } from "react-icons/hi";
+
+function RemoveBtn() {
+  return (
+    <button className="text-red-400">
+      <HiOutlineTrash size={24} />
+    </button>
+  );
+}
+
+export default RemoveBtn;

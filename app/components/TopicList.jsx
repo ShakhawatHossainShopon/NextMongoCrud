@@ -1,17 +1,26 @@
 import React from "react";
-import { RemoveBtn } from "./RemoveBtn";
-import { Link } from "next/link";
-export const TopicList = () => {
+import Link from "next/link";
+import RemoveBtn from "@/app/components/RemoveBtn";
+import { HiPencilAlt } from "react-icons/hi";
+
+const TopicList = () => {
   return (
-    <div>
-      <div>
-        <h2>Topic Titles</h2>
-        <div>Topic des</div>
+    <>
+      <div className="p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start">
+        <div>
+          <h2 className="font-bold text-2xl">helol</h2>
+          <div>hello</div>
+        </div>
+
+        <div className="flex gap-2">
+          <RemoveBtn />
+          <Link href={"/editTopic/1"}>
+            <HiPencilAlt size={24} />
+          </Link>
+        </div>
       </div>
-      <div>
-        <RemoveBtn />
-        <Link href={"/editTopic/123"}>Edit</Link>
-      </div>
-    </div>
+    </>
   );
 };
+
+export default TopicList;
